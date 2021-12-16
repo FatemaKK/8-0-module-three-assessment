@@ -36,7 +36,7 @@ class People extends React.Component {
       );
     });
     return (
-      <div className="locations">
+      <div className="people">
         <h1>Search for a Person</h1>
         <div className="peopleList">{display}</div>
       </div>
