@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import "./Locations.css"
+import "./Locations.css";
 
 class Locations extends React.Component {
   constructor() {
@@ -13,7 +13,7 @@ class Locations extends React.Component {
 
   fetchLocations = () => {
     fetch("https://ghibliapi.herokuapp.com/locations")
-      .then((res) => res.json()) 
+      .then((res) => res.json())
       .then((data) => {
         this.setState({
           locations: data,
@@ -27,11 +27,11 @@ class Locations extends React.Component {
 
   show = () => {
     if (this.state.toggle === true) {
-      this.setState({toggle: false})
+      this.setState({ toggle: false });
     } else {
-      this.setState({toggle: true})
+      this.setState({ toggle: true });
     }
-  }
+  };
 
   render() {
     let display = this.state.locations.map((location) => {
@@ -47,6 +47,7 @@ class Locations extends React.Component {
       <div className="locations">
         <h1>List of Locations</h1>
         <button onClick={this.show}>Show Locations</button>
+        {/* <button onClick={this.hide}>Hide Locations</button> */}
         <div className="locationList">{this.state.toggle ? display : " "}</div>
       </div>
     );
@@ -54,15 +55,3 @@ class Locations extends React.Component {
 }
 
 export default Locations;
-
-
-
-
-
-
-
-  
-
-  
-
- 
