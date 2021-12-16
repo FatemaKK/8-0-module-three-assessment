@@ -1,0 +1,11 @@
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(117, 225, 159);
+    padding: 10px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 50px;
+}
