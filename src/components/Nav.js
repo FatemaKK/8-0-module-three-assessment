@@ -14,9 +14,9 @@ class Nav extends React.Component {
             alt="Nav Logo"
           />
         </Link>
-        <Link to="/movies">Movies</Link>
-        <Link to="/people">People</Link>
-        <Link to="/locations">Locations</Link>
+        <Link className="link" to="/movies">Movies</Link>
+        <Link className="link" to="/people">People</Link>
+        <Link className="link" to="/locations">Locations</Link>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "./Movies.css";
 
 class Movies extends React.Component {
   constructor() {
@@ -47,15 +48,11 @@ class Movies extends React.Component {
           <option></option>
           {dropDown}
         </select>
-
-        <h3>
-          {this.state.currentMovie ? this.state.currentMovie.title : null}{" "}
-          {this.state.currentMovie?.title}
-          <br/>
-          {this.state.currentMovie?.release_date}
-          <br/>
-          {this.state.currentMovie?.description}
-        </h3>
+        <h2>
+          {this.state.currentMovie ? this.state.currentMovie.title : null}
+        </h2>
+        <h3>{this.state.currentMovie?.release_date}</h3>
+        <h3>{this.state.currentMovie?.description}</h3>
       </div>
     );
   }
