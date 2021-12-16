@@ -1,4 +1,5 @@
 .locations {
   background-color: rgb(140, 219, 237);
   height: 100vh;
+  overflow: scroll;
 }

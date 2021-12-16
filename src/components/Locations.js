@@ -5,9 +5,9 @@ import "./Locations.css"
 class Locations extends React.Component {
   constructor() {
     super();
-
     this.state = {
       locations: [],
+      toggle: true,
     };
   }
 
@@ -25,6 +25,14 @@ class Locations extends React.Component {
     this.fetchLocations();
   };
 
+  show = () => {
+    if (this.state.toggle === true) {
+      this.setState({toggle: false})
+    } else {
+      this.setState({toggle: true})
+    }
+  }
+
   render() {
     let display = this.state.locations.map((location) => {
       return (
@@ -38,7 +46,8 @@ class Locations extends React.Component {
     return (
       <div className="locations">
         <h1>List of Locations</h1>
-        <div className="locationList">{display}</div>
+        <button onClick={this.show}>Show Locations</button>
+        <div className="locationList">{this.state.toggle ? display : " "}</div>
       </div>
     );
   }
